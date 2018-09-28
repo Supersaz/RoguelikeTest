@@ -10,7 +10,7 @@ public class WorldGeneration : MonoBehaviour {
     }
         private const int WorldMAX_ROW = 100;
         private const int WorldMAX_COL = 100;
-        int[,] World = new int[WorldMAX_ROW, WorldMAX_COL];
+        public int[,] World = new int[WorldMAX_ROW, WorldMAX_COL];
         private Vector2 currentPosition;
         public int featureCount;
         public int RoomSizeMAX = 5;
@@ -24,19 +24,17 @@ public class WorldGeneration : MonoBehaviour {
             {
                 for (int col = 0; col < World.GetLength(1); col++)
                 {
-                    switch(World[row, col])
+                    if (World[row, col] == 1 || 
+                        World[row, col] == 2 ||
+                        World[row, col] == 9)
+                        Instantiate(Resources.Load("Floor"), new Vector3(row, -0.1f, col), Quaternion.identity);
+
+                    switch (World[row, col])
                     {
                         case 0:
                             Instantiate(Resources.Load("Wall"), new Vector3(row, 0, col), Quaternion.identity);
                             break;
-                        case 1:
-                            Instantiate(Resources.Load("Floor"), new Vector3(row, -0.1f, col), Quaternion.identity);
-                            break;
-                        case 2:
-                            Instantiate(Resources.Load("Floor"), new Vector3(row, -0.1f, col), Quaternion.identity);
-                            break;
                         case 9:
-                            Instantiate(Resources.Load("Floor"), new Vector3(row, -0.1f, col), Quaternion.identity);
                             Instantiate(Resources.Load("Player"), new Vector3(row, 0, col), Quaternion.identity);
                             break;
                         default:
@@ -44,6 +42,7 @@ public class WorldGeneration : MonoBehaviour {
                     }
                 }
             }
+
             
         }
 

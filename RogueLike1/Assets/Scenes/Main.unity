@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3ee618ac091ec348b1ffbfa6c55fc84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  featureCount: 10
+  featureCount: 5
   RoomSizeMAX: 10
   RoomSizeMIN: -10
 --- !u!4 &1510214345
