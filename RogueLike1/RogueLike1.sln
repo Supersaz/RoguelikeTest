@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{D2230C04-99A6-0CDE-441C-D05D52A786D5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RogueLike1", "Assembly-CSharp.csproj", "{D2230C04-99A6-0CDE-441C-D05D52A786D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
