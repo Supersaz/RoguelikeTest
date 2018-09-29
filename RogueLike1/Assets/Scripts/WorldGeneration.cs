@@ -8,6 +8,8 @@ public class WorldGeneration : MonoBehaviour {
     void Start () {
         CreateWorld(featureCount);
     }
+
+        MovementPlayer MP = new MovementPlayer();
         private const int WorldMAX_ROW = 100;
         private const int WorldMAX_COL = 100;
         public int[,] World = new int[WorldMAX_ROW, WorldMAX_COL];
@@ -42,7 +44,7 @@ public class WorldGeneration : MonoBehaviour {
                     }
                 }
             }
-
+            MP.findPosition();
             
         }
 

@@ -9,7 +9,7 @@ public class MovementPlayer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		findPosition();
+		
 	}
 	
 	// Update is called once per frame
